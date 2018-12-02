@@ -1,9 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import nightmare from 'nightmare'
+import { expect } from 'chai'
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+describe('When visiting the homepage', function () {
+  test('it welcomes the user', async function () {
+    nightmare()
+      .goto('http://localhost:3000')
+      .then(text => {
+        expect(text).toContain('Edit src/App.js and save to reload.')
+      })
+  })
+})
