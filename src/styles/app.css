@@ -1,0 +1,46 @@
+/* This file is for your main application css. */
+/* use fonts from priv/static/fonts/ */
+/* Custom Stuff */
+.body {
+  text-align: center; }
+  .body h1 {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif; }
+  .body p {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif; }
+
+.pageIndex {
+  margin-top: 10rem; }
+  @media only screen and (min-width: 768px) {
+    .pageIndex {
+      margin-top: 25rem; } }
+  .pageIndex__h1 {
+    margin-bottom: 3rem;
+    transition: font-size 0.5s ease;
+    -webkit-transition: font-size 0.5s ease;
+    font-size: 500%;
+    /* Small Devices, Tablets */ }
+    @media only screen and (min-width: 768px) {
+      .pageIndex__h1 {
+        font-size: 800%; } }
+  .pageIndex__h1:hover {
+    font-size: 700%;
+    /* Small Devices, Tablets */ }
+    @media only screen and (min-width: 768px) {
+      .pageIndex__h1:hover {
+        font-size: 1200%; } }
+  .pageIndex__p {
+    margin-bottom: 11rem;
+    font-size: 125%; }
+
+.fontLinkElement {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  display: inline-block; }
+  .fontLinkElement i {
+    transition: color 1s ease;
+    -webkit-transition: color 0.5s ease;
+    color: black; }
+  .fontLinkElement i:hover {
+    color: grey; }
+
+/*# sourceMappingURL=app.css.map */

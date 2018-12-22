@@ -1,12 +1,14 @@
 import nightmare from 'nightmare'
 import { expect } from 'chai'
 
-describe('When visiting the homepage', function () {
-  test('it welcomes the user', async function () {
-    nightmare()
-      .goto('http://localhost:3000')
-      .then(text => {
-        expect(text).toContain('Edit src/App.js and save to reload.')
-      })
+describe('When visiting the homepage', () => {
+  test('shows the title', async ()  => {
+    let page = nightmare().goto('http://localhost:3000')
+
+    let text = await page
+      .evaluate(() => document.body.textContent)
+      .end()
+
+    expect(text).to.include('niclan')
   })
 })
